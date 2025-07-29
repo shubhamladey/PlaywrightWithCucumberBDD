@@ -1,0 +1,26 @@
+{
+  "name": "playwrite-afw",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "npx cucumber-js",
+    "allure:generate": "allure generate allure-results --clean",
+    "allure:open": "allure open allure-report",
+    "cucumberReport" : "npx cucumber-js test/features/*.js --parallel 2 --format html:cucumber-report.html",
+    "byTag" : "npx cucumber-js --tags @infoValidation --format html:cucumber-report.html" 
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@playwright/test": "^1.50.1",
+    "@types/node": "^22.13.1",
+    "allure-playwright": "^3.1.0"
+  },
+  "dependencies": {
+    "@cucumber/cucumber": "^11.2.0",
+    "allure-commandline": "^2.32.2",
+    "dotenv": "^16.4.7"
+  }
+}
